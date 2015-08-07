@@ -1,14 +1,8 @@
-var express = require('express');
-var app = express();
+var http = require('http');
 
-app.set('port', (process.env.PORT || 3000))
-
-app.use(express.static(__dirname + '/client'));
-
-app.get('/', function(request, response) {
-    response.render('/client/index.html')
+var server = http.createServer(function(req, res){
+	res.writeHead(200, {'Content-Type':'text/html'});
+	res.end('<h1>Hello World</h1>');
 });
 
-app.listen(app.get('port'), function(){
-    console.log('Listening on port ', app.get('port'));
-});
+server.listen(process.env.PORT || 5000);
