@@ -1,8 +1,14 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-var server = http.createServer(function(req, res){
-	res.writeHead(200, {'Content-Type':'text/html'});
-	res.end('<h1>Hello World</h1>');
+app.set('port', (process.env.PORT || 3000))
+
+app.use(express.static(__dirname + '/jsappredd'));
+
+app.get('/', function(request, response) {
+    response.render('/jsappredd/index.html')
 });
 
-server.listen(process.env.PORT || 5000);
+app.listen(app.get('port'), function(){
+    console.log('Listening on port ', app.get('port'));
+});
