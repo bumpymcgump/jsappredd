@@ -3,10 +3,10 @@ var app = express();
 
 app.set('port', (process.env.PORT || 3000))
 
-app.use(express.static(__dirname + '/jsappredd'));
+app.use(express.static(__dirname + '/js app/jsappredd'));
 
 app.get('/', function(request, response) {
-    response.render('/jsappredd/index.html')
+    response.render('/js app/jsappredd/index.html')
 });
 
 app.listen(app.get('port'), function(){
