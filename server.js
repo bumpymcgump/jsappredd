@@ -1,8 +1,7 @@
-var http = require('http');
-
-var server = http.createServer(function(req, res){
-	res.writeHead(200, {'Content-Type':'text/html'});
-	res.end('<h1>Hello World</h1>');
+var port = process.env.PORT || 3000;
+app.get('/', function (req, res) {
+  res.sendfile(__dirname + '/index.html');
 });
-
-server.listen(process.env.PORT || 5000);
+app.listen(port, function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+});
