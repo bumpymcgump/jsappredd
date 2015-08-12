@@ -4,24 +4,50 @@
 	<meta charset="UTF-8">
 	<title>Touchin' Apps</title>
 	<link rel="stylesheet" type="text/css" href="jsapp.css">
-	<script type="text/javascript" src=jsapp.js></script>
+	<script type="text/javascript" src="jsapp.js"></script>
 </head>
 <body>
+	<br>
+	<br>
+	<br>
+	<br>
 	<h1>Quiz Application</h1>
 	<div class = "container">
-		<h2 class = "center">Test your knowledge!</h2>
+		<h2 class = "center underline">Test your knowledge!</h2>
 		<h3 class = "center underline">Question one:</h3>
 		<p class = "center bold">What number is next in this sequence, 2, 4, 6, 8....</p>
 
-		<form class = "radios">
-			<input type="radio" name=One value="65">65
-			<br>
-			<input type="radio" name=One value="24">24
-			<br>
-			<input type="radio" name=One value="10">10
-			<br>
-			<input type="radio" name=One value="3">3
+		<form class = "radios center">
+		<input id ="q1"  type="radio" name="q1" value="65">65
+		<input id ="q1"  type="radio" name="q1" value="24">24
+		<br>
+		<input id ="q1"  type="radio" name="q1" value="10">10
+		<input id ="q1" type="radio" name="q1" value="3">3
+		<br>		
+		<h3 class = "center underline">Question two:</h3>
+		<p class = "center bold">Which one of these is a season?</p>
+		<input id ="q2" type="radio" name="q2" value="Winter">Winter
+		<input id ="q2"  type="radio" name="q2" value="August">August
+		<br>
+		<input id ="q2"  type="radio" name="q2" value="Sassafrass">Sassafrass
+		<input id ="q2"  type="radio" name="q2" value="Choctember">Choctember
+		<br>
+		<h3 class="center underline">Question three:</h3>
+		<p class="center bold">When/Where is the moon most visible?</p>
+		<input id ="q3" type="radio" name="q3" value="At night">At night
+		<input id ="q3"  type="radio" name="q3" value="Daytime">Daytime
+		<br>
+		<input id ="q3"  type="radio" name="q3" value="In space">In space
+		<input id ="q3"  type="radio" name="q3" value="On the moon">On the moon
+		<br>
+		<br>
+		<div class="center bold">
+			<input type = "button" value="Submit Answers!" onclick="checkAns()">
+		</div>
 		</form>
-
+		<br>
+		
 	</div>
+	<div id="result"></div>
+  </div>
 </body>
